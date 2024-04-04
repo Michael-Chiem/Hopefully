@@ -1,112 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
+<div class="row">
+  <div class="col-md-6">
+    <h2>Login</h2>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #34495e; /* Dark green background color */
-      color: #fff; /* White text color */
-    }
-
-    .login-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-
-    .login-form {
-      background-color: #2c3e50; /* Darker green for form background */
-      padding: 20px;
-      border-radius: 5px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .form-group {
-      margin-bottom: 20px;
-    }
-
-    .form-label {
-      font-weight: bold;
-    }
-
-    .form-input {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      background-color: #fff; /* White background for input fields */
-      color: #333; /* Text color for input fields */
-    }
-
-    .btn-primary {
-      background-color: #16a085; /* Dark green button color */
-      color: #fff;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    .btn-primary:hover {
-      background-color: #1abc9c; /* Lighter green hover color */
-    }
-  </style>
-</head>
-
-<body>
-  <div class="login-container">
-    <div class="row">
-      <div class="col-md-6">
-        <div class="login-form">
-          <h2>Login</h2>
-          <form class="form login-form">
-            <div class="form-group">
-              <label for="email-login" class="form-label">Email:</label>
-              <input class="form-input" type="text" id="email-login" />
-            </div>
-            <div class="form-group">
-              <label for="password-login" class="form-label">Password:</label>
-              <input class="form-input" type="password" id="password-login" />
-            </div>
-            <div class="form-group">
-              <button class="btn btn-primary" type="submit">Login</button>
-            </div>
-          </form>
-        </div>
+    <form class="form login-form">
+      <div class="form-group">
+        <label for="email-login">email:</label>
+        <input class="form-input" type="text" id="email-login" />
       </div>
-      <div class="col-md-6">
-        <div class="login-form">
-          <h2>Signup</h2>
-          <form class="form signup-form">
-            <div class="form-group">
-              <label for="name-signup" class="form-label">Name:</label>
-              <input class="form-input" type="text" id="name-signup" />
-            </div>
-            <div class="form-group">
-              <label for="email-signup" class="form-label">Email:</label>
-              <input class="form-input" type="text" id="email-signup" />
-            </div>
-            <div class="form-group">
-              <label for="password-signup" class="form-label">Password:</label>
-              <input class="form-input" type="password" id="password-signup" />
-            </div>
-            <div class="form-group">
-              <button class="btn btn-primary" type="submit">Signup</button>
-            </div>
-          </form>
-        </div>
+      <div class="form-group">
+        <label for="password-login">password:</label>
+        <input class="form-input" type="password" id="password-login" />
       </div>
-    </div>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">login</button>
+      </div>
+    </form>
   </div>
+  <div class="col-md-6">
+    <h2>Signup</h2>
 
-  <script src="./js/login.js"></script>
-</body>
+    <form class="form signup-form">
+      <div class="form-group">
+        <label for="name-signup">name:</label>
+        <input class="form-input" type="text" id="name-signup" />
+      </div>
+      <div class="form-group">
+        <label for="email-signup">email:</label>
+        <input class="form-input" type="text" id="email-signup" />
+      </div>
+      <div class="form-group">
+        <label for="password-signup">password:</label>
+        <input class="form-input" type="password" id="password-signup" />
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">signup</button>
+      </div>
+    </form>
+  </div>
+</div>
 
-</html>
+<script src="./js/login.js"></script>
