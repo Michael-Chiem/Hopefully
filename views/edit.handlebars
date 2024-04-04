@@ -1,0 +1,36 @@
+<div>
+  <h2>{{postDataPlain.title}}</h2>
+  <p>{{postDataPlain.text}}</p>
+  <p>Created by {{postDataPlain.user.name}} on {{format_date postDataPlain.date_created}}</p>
+ 
+  <h3>Comments:</h3>
+  {{#each postDataPlain.comments as |comment| }}
+    <p>{{comment.text}} by {{comment.user.name}}</p> 
+  {{/each}}
+  
+  <div>
+    <h4>Edit your post:</h4>
+    <textarea id="postText" class="form-input" style="width: 500px; height:200px">{{postDataPlain.text}}</textarea>
+    <textarea id="postComment" class="form-input" style="width: 500px; height:100px">{{postDataPlain.comment}}</textarea> <!-- Added comment field -->
+    <button type="submit" id="btn" userId={{userId}} postId={{postDataPlain.id}} class="btn btn-primary">Submit</button>
+  </div>
+</div>
+
+<script>
+document.getElementById('btn').addEventListener('click', async function(){
+  const postId = document.getElementById('btn').getAttribute('postId')
+  const postText = document.getElementById('postText').value;
+  const postComment = document.getElementById('postComment').value; // Retrieve comment value
+  const userId = document.getElementById('btn').getAttribute('userId')
+  
+  const res = await fetch(`/api/posts/${postId}`, {
+    method: 'PUT',
+    body: JSON.stringify({ text: postText, comment: postComment, user_id: userId}), // Include comment in the request body
+    headers: { 'Content-Type': 'application/json' },
+  })
+
+  if (res.ok){
+    document.location.replace('/profile');
+  }
+})
+</script>

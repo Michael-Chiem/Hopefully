@@ -1,2 +1,2 @@
-DROP DATABASE IF EXISTS wingedcoders_db;
-CREATE DATABASE wingedcoders_db;
+DROP DATABASE IF EXISTS myblog_db;
+CREATE DATABASE myblog_db;

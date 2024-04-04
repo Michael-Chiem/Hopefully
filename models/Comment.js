@@ -20,6 +20,10 @@ Comment.init(
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
+    // needed_funding: {
+    //   type: DataTypes.FLOAT,
+    //   allowNull: false,
+    // },
     post_id: {
       type: DataTypes.INTEGER,
       references: {
